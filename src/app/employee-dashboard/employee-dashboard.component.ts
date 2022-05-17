@@ -26,7 +26,6 @@ export class EmployeeDashboardComponent implements OnInit {
       lastName:[''],
       email:[''],
       mobile:[''],
-      salary:[''],
     })
 
     this.getAllEmployee();
@@ -38,7 +37,7 @@ export class EmployeeDashboardComponent implements OnInit {
     this.employeeModelObj.lastName = this.formValue.value.lastName;
     this.employeeModelObj.email = this.formValue.value.email;
     this.employeeModelObj.mobile = this.formValue.value.mobile;
-    this.employeeModelObj.salary= this.formValue.value.salary;
+   
   
     this.api.postEmployee(this.employeeModelObj).subscribe((res)=>{
       if(res){
@@ -77,7 +76,6 @@ export class EmployeeDashboardComponent implements OnInit {
     this.formValue.controls['lastName'].setValue(row.lastName);
     this.formValue.controls['email'].setValue(row.email);
     this.formValue.controls['mobile'].setValue(row.mobile);
-    this.formValue.controls['salary'].setValue(row.salary);
   
   }
   
@@ -86,7 +84,6 @@ export class EmployeeDashboardComponent implements OnInit {
     this.employeeModelObj.lastName = this.formValue.value.lastName;
     this.employeeModelObj.email = this.formValue.value.email;
     this.employeeModelObj.mobile = this.formValue.value.mobile;
-    this.employeeModelObj.salary= this.formValue.value.salary;
   
     this.api.updateEmployee(this.employeeModelObj,this.employeeModelObj.id).subscribe((res)=>{
       if(res){

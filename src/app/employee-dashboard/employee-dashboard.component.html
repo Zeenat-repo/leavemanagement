@@ -16,7 +16,6 @@
             <th scope="col">Last Name </th>
             <th scope="col">Email Id </th>
             <th scope="col">Mobile No </th>
-            <th scope="col">Salary </th>
             <th scope="col">Action</th>
         </tr>
     </thead>
@@ -27,7 +26,6 @@
             <td>{{row.lastName}}</td>
             <td>{{row.email}}</td>
             <td>{{row.mobile}}</td>
-            <td>{{row.salary}}</td>
             <td>
                 <button class="btn btn-info"  type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="onEdit(row)">Edit</button>
                 <button class="btn btn-danger mx-3" (click)="deleteEmployee(row)">Delete</button>
@@ -71,12 +69,7 @@
                   <label for="exampleInputPassword1" class="form-label">Mobile No</label>
                   <input type="text" 
                   autocomplete="off" formControlName="mobile" class="form-control" id="exampleInputPassword1">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Salary</label>
-                    <input type="text"  autocomplete="off" formControlName="salary" class="form-control" id="exampleInputPassword1">
-                  </div>
-               
+                </div>             
               </form>
         </div>
         <div class="modal-footer">
