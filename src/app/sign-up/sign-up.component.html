@@ -47,16 +47,26 @@
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Contact No </label>
                       <input type="text" 
-                      placeholder="Enter mobile no"
+                      placeholder="Enter 10 digit mobile no"
                       autocomplete="off" formControlName="mobile" class="form-control" id="exampleInputPassword1">
                       <span class="text-danger" *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">Contact No is required</span>
+                      
                     </div>
 
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Department</label>
-                        <input type="text" 
+                        <label for="exampleInputPassword1" class="form-label" >Department</label>
+                        <select  formControlName="department" class="form-control ">
+                          <option value="" ></option>
+                          <option value="Hod">HOD</option>
+                          <option value="Me">Diploma in Mechanical Engineering</option>
+                          <option value="Electrical">Diploma in Electrical Engineering</option>
+                          <option value="Eee">Diploma in Electrical and Electronics Engineering</option>
+                          <option value="Cse">Diploma in Computer Science Engineering</option>
+                          <option value="Ece">Diploma in Electronics and Communication Engineering.</option>
+                      </select>
+                        <!-- <input type="text" 
                         placeholder="Select from dropdown"
-                        autocomplete="off" formControlName="department" class="form-control" id="exampleInputPassword1">
+                        autocomplete="off" formControlName="department" class="form-control" id="exampleInputPassword1"> -->
                         <span class="text-danger" *ngIf="signupForm.controls['department'].dirty && signupForm.hasError('required','department')">Department  is required</span>
                       </div>
 
@@ -67,7 +77,7 @@
                         placeholder="Enter password"
                         autocomplete="off"
                         formControlName="password" class="form-control" id="exampleInputPassword1">
-                        <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">Contact No is required</span>
+                        <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">Password is required</span>
                       </div>
 
 
