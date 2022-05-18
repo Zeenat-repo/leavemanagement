@@ -1,4 +1,28 @@
 {
+  "department": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "status": "1"
+    },
+    {
+      "id": 2,
+      "name": "Sales",
+      "status": "1"
+    }
+  ],
+  "role": [
+    {
+      "id": 1,
+      "name": "HOD",
+      "status": "1"
+    },
+    {
+      "id": 2,
+      "name": "Staff",
+      "status": "1"
+    }
+  ],
   "posts": [
     {
       "id": 1,
