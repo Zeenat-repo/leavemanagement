@@ -13,13 +13,20 @@ import {MatIconModule} from '@angular/material/icon';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatDividerModule } from '@angular/material/divider';
+import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
+import { DashboardForStaffComponent } from './dashboard-for-staff/dashboard-for-staff.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     EmployeeDashboardComponent,
-    SignUpComponent
+    SignUpComponent,
+    SidebarMenuComponent,
+    DashboardForStaffComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     MatIconModule,
     HttpClientModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatDividerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

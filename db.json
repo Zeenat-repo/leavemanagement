@@ -44,6 +44,24 @@
       "department": "civil",
       "password": "098765",
       "id": 3
+    },
+    {
+      "fullName": "Angular",
+      "userName": "Angular.Developer",
+      "email": "angular@gmail.com",
+      "mobile": "4534567897",
+      "department": "HOD",
+      "password": "234567",
+      "id": 4
+    },
+    {
+      "fullName": "asdfqwertgyhuj",
+      "userName": "asdef.sderf",
+      "email": "zen@gmail.com",
+      "mobile": "1234567897",
+      "department": "Electrical",
+      "password": "123456789",
+      "id": 5
     }
   ],
   "profile": {

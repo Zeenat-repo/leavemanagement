@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     // this.loginForm.reset();
     this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     })
   
@@ -36,15 +36,22 @@ export class LoginComponent implements OnInit {
       const user = res.find((a:any)=>{
         return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
       });
-      if(user){
+      if(user.department == 'HOD'){
+        console.log('zee',user);
+        
         alert("login success");
         this.loginForm.reset();
-        this.router.navigate(['dashboard'])
+        this.router.navigate(['dashboardHod'])
       }else{
-        alert("User not found");
+        this.loginForm.reset();
+        this.router.navigate(['dashboard'])
+        // this.router.navigate(['dashboardStaff'])
+        
+      
+        // alert("User not found");
       }
     }else{
-      alert("Something went wrong");
+      alert("User not found");
     }
    
   });
