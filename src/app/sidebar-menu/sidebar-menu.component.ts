@@ -15,6 +15,7 @@ export class SidebarMenuComponent implements OnInit {
   
   }
   goToPage(paramText:string){
+    console.log(paramText)
     this.selectedTab = paramText
 
   }
