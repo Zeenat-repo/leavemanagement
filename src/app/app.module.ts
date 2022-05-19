@@ -18,6 +18,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { MatDividerModule } from '@angular/material/divider';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { DashboardForStaffComponent } from './dashboard-for-staff/dashboard-for-staff.component';
+import { StaffModule } from './staff/staff.module';
+import { CommonComponent } from './services/common/common.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { DashboardForStaffComponent } from './dashboard-for-staff/dashboard-for-
     EmployeeDashboardComponent,
     SignUpComponent,
     SidebarMenuComponent,
-    DashboardForStaffComponent
+    DashboardForStaffComponent,
+    CommonComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ import { DashboardForStaffComponent } from './dashboard-for-staff/dashboard-for-
     MatToolbarModule,
     MatSidenavModule,
     MatDividerModule,
+    StaffModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
