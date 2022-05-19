@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -7,15 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar-menu.component.scss']
 })
 export class SidebarMenuComponent implements OnInit {
-  selectedTab:any = 'dashboard' ;
+  selectedTab: any = 'dashboard';
 
-  constructor() { }
+  constructor(private cdref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-  
+
   }
-  goToPage(paramText:string){
+  goToPage(paramText: string) {
     this.selectedTab = paramText
+
+  }
+  ngAfterContentChecked() {
+
+
+    this.cdref.detectChanges();
 
   }
 

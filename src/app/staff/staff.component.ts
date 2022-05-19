@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StaffComponent implements OnInit {
 
+  selectedTab: any = 'dashboard';
+
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+  goToPage(paramText: string) {
+    this.selectedTab = paramText;
+
   }
 
 }

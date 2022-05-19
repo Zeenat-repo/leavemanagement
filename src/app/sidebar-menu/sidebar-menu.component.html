@@ -4,23 +4,31 @@
 
 <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
-<button mat-button class="menu-button" (click)="goToPage('dashboard')">
-    <mat-icon>dashboard</mat-icon>
-    <span>Dashboard</span>
-</button>
-<button mat-button class="menu-button" (click)="goToPage('staffManagement')">
-    <mat-icon>info</mat-icon>
-    <span>StaffManagement</span>
-</button>
+        <button mat-button class="menu-button" (click)="goToPage('dashboard')">
+            <mat-icon>dashboard</mat-icon>
+            <span>Dashboard</span>
+        </button>
+        <button mat-button class="menu-button" (click)="goToPage('staffManagement')">
+            <mat-icon>info</mat-icon>
+            <span>StaffManagement</span>
+        </button>
     </mat-sidenav>
-    <mat-sidenav-content  *ngIf="selectedTab == 'dashboard'">
+    <mat-sidenav-content *ngIf="selectedTab == 'dashboard'">
         <div class="content mat-elevation-z4">
-          dashboard
+            dashboard555
+            <router-outlet></router-outlet>
         </div>
     </mat-sidenav-content>
-<mat-sidenav-content *ngIf="selectedTab == 'leaveManagement'">
-        <div class="content mat-elevation-z4" >
+    <mat-sidenav-content *ngIf="selectedTab == 'staff-management'">
+        <div class="content mat-elevation-z4">
+            Stafff
+            <!-- <app-staff-management></app-staff-management> -->
+
+        </div>
+    </mat-sidenav-content>
+    <mat-sidenav-content *ngIf="selectedTab == 'leaveManagement'">
+        <div class="content mat-elevation-z4">
             leave
-          </div>
+        </div>
     </mat-sidenav-content>
 </mat-sidenav-container>

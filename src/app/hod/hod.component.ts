@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hod',
@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HodComponent implements OnInit {
 
-  constructor() { }
+  selectedTab: any = 'dashboard';
+
+  constructor(private cdref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
+
+  }
+  goToPage(paramText: string) {
+    this.selectedTab = paramText
+
+  }
+  ngAfterContentChecked() {
+
+
+    this.cdref.detectChanges();
+
   }
 
 }

@@ -22,14 +22,7 @@ const routes: Routes = [
     component: SignUpComponent
   },
 
-  {
-    path: 'dashboard',
-    component: EmployeeDashboardComponent
-  },
-  {
-    path: 'dashboardHod',
-    component: SidebarMenuComponent
-  },
+
 
   { path: 'hod', loadChildren: () => import('./hod/hod.module').then(m => m.HodModule) },
   { path: 'staff', loadChildren: () => import('./staff/staff.module').then(m => m.StaffModule) },
