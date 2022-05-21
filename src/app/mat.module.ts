@@ -16,6 +16,7 @@ import { MatDividerModule } from '@angular/material/divider';
 
 import { CommonComponent } from './services/common/common.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
     declarations: [
@@ -31,6 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatToolbarModule,
         MatSidenavModule,
         MatDividerModule,
+        MatDialogModule
     ],
     exports: [
         MatCardModule,
@@ -40,6 +42,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
         MatToolbarModule,
         MatSidenavModule,
         MatDividerModule,
+        MatDialogModule
     ],
     providers: [],
     bootstrap: [AppComponent]

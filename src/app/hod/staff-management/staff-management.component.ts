@@ -3,7 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { StaffService } from 'src/app/services/staff.service';
 import { Observable, of } from 'rxjs';
 import { IDatasource, IGetRowsParams, GridOptions, GridApi, ColDef } from 'ag-grid-community';
-
+import { ButtonRendererComponent } from '../../button-renderer.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ViewStaffComponent } from '../view-staff/view-staff.component';
 @Component({
   selector: 'app-staff-management',
   templateUrl: './staff-management.component.html',
@@ -11,7 +13,17 @@ import { IDatasource, IGetRowsParams, GridOptions, GridApi, ColDef } from 'ag-gr
 })
 export class StaffManagementComponent implements OnInit {
   // gridApi: GridApi;
-  constructor(private staffService: StaffService) { }
+  frameworkComponents: any;
+  api: any;
+  constructor(private staffService: StaffService,
+    public dialog: MatDialog
+
+  ) {
+
+    this.frameworkComponents = {
+      buttonRenderer: ButtonRendererComponent,
+    }
+  }
   gridOptions: GridOptions = {
     pagination: true,
     rowModelType: 'infinite',
@@ -55,7 +67,25 @@ export class StaffManagementComponent implements OnInit {
       sortable: true,
       filter: "agNumberColumnFilter",
 
-    }
+    },
+    {
+      headerName: 'Edit',
+      width: 100,
+      cellRenderer: 'buttonRenderer',
+      cellRendererParams: {
+        onClick: this.onEditButtonClick.bind(this),
+        label: 'Edit'
+      },
+    },
+    {
+      headerName: 'View',
+      cellRenderer: 'buttonRenderer',
+      width: 100,
+      cellRendererParams: {
+        onClick: this.onViewButtonClick.bind(this),
+        label: 'View'
+      },
+    },
   ];
 
   // rowData = [
@@ -65,11 +95,18 @@ export class StaffManagementComponent implements OnInit {
   // ];
   ngOnInit(): void {
     this.loadData();
-  }
 
+    // this.gridApi.setRowData(this.rowData);
+  }
+  viewData() {
+    console.log("called me:")
+  }
   loadData() {
     this.staffService.getStaffMembers().subscribe(result => {
       this.rowData = result;
+      this.rowData.forEach(element => {
+        element.action = "<a href='' (click)='viewData()'>View</a>"
+      });
     });
   }
 
@@ -79,10 +116,33 @@ export class StaffManagementComponent implements OnInit {
 
   onGridReady(params: any) {
     this.gridApi = params.api;
+    this.loadData()
   }
 
   getData(params: any): Observable<{ data: any; totalRecords: any }> {
     return of({ data: this.rowData, totalRecords: 85 });
+  }
+
+  onEditButtonClick(params) {
+    console.log("editi:", params.data)
+
+    const dialogRef = this.dialog.open(ViewStaffComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+  onViewButtonClick(params) {
+    console.log("view:", params.data)
+    const dialogRef = this.dialog.open(ViewStaffComponent, { data: params.data, width: '50%', });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+
+  }
+  onRowEditingStopped(params) {
+    debugger;
   }
 
 

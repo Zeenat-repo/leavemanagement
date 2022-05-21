@@ -6,13 +6,17 @@ import { HodComponent } from './hod.component';
 import { AgGridModule } from 'ag-grid-angular';
 import { MatModule } from '../mat.module';
 import { StaffManagementComponent } from './staff-management/staff-management.component';
+import { ButtonRendererComponent } from '../button-renderer.component';
+import { ViewStaffComponent } from './view-staff/view-staff.component';
 
 
 
 @NgModule({
   declarations: [
     HodComponent,
-    StaffManagementComponent
+    StaffManagementComponent,
+    ButtonRendererComponent,
+    ViewStaffComponent
   ],
   imports: [
     MatModule,
@@ -22,6 +26,7 @@ import { StaffManagementComponent } from './staff-management/staff-management.co
 
   ],
   bootstrap: [HodComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [ViewStaffComponent]
 })
 export class HodModule { }

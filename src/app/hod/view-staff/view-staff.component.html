@@ -1,0 +1,26 @@
+<h2 mat-dialog-title>View Staff Details</h2>
+<mat-dialog-content class="mat-typography">
+    <h3>Develop across all platforms</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col">Name</div>
+            <div class="col">{{data.fullName}}</div>
+
+        </div>
+        <div class="row">
+            <div class="col">Email </div>
+            <div class="col">{{data.email}}</div>
+
+        </div>
+        <div class="row">
+            <div class="col">Mobile</div>
+            <div class="col">{{data.mobile}}</div>
+
+        </div>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+
+</mat-dialog-actions>
