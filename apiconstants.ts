@@ -5,5 +5,6 @@ export const apiConst = {
     "department": apiServerUrl + "/department",
     "userType": apiServerUrl + "/userType",
     "staffMembers": apiServerUrl + "/signUpUsers",
+    "appliedLeave": apiServerUrl + "/appliedLeave",
 
 }

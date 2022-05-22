@@ -8,6 +8,7 @@ import { MatModule } from '../mat.module';
 import { StaffManagementComponent } from './staff-management/staff-management.component';
 import { ButtonRendererComponent } from '../button-renderer.component';
 import { ViewStaffComponent } from './view-staff/view-staff.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 
@@ -16,7 +17,8 @@ import { ViewStaffComponent } from './view-staff/view-staff.component';
     HodComponent,
     StaffManagementComponent,
     ButtonRendererComponent,
-    ViewStaffComponent
+    ViewStaffComponent,
+    DashboardComponent
   ],
   imports: [
     MatModule,

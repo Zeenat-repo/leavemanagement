@@ -152,6 +152,36 @@
       "id": 11
     }
   ],
+  "leaveStatus": [
+    {
+      "id": 1,
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "status": "Approved"
+    },
+    {
+      "id": 3,
+      "status": "Rejected"
+    }
+  ],
+  "appliedLeave": [
+    {
+      "id": 1,
+      "startDate": "05-10-2022",
+      "endDate": "05-15-2022",
+      "userId": "1",
+      "status": "2"
+    },
+    {
+      "id": 2,
+      "startDate": "05-10-2022",
+      "endDate": "05-15-2022",
+      "userId": "1",
+      "status": "1"
+    }
+  ],
   "profile": {
     "name": "typicode2"
   }
