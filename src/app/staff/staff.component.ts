@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-staff',
@@ -9,14 +9,21 @@ export class StaffComponent implements OnInit {
 
   selectedTab: any = 'dashboard';
 
-  constructor() { }
+  constructor(private cdref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
 
   }
   goToPage(paramText: string) {
-    this.selectedTab = paramText;
+    this.selectedTab = paramText
 
   }
+  ngAfterContentChecked() {
+
+
+    this.cdref.detectChanges();
+
+  }
+
 
 }

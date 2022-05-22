@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CommonService } from '../services/common.service';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private http: HttpClient,
-    private router: Router,) { }
+    private router: Router, private commonService: CommonService) { }
 
   ngOnInit(): void {
     // this.loginForm.reset();
@@ -36,6 +37,9 @@ export class LoginComponent implements OnInit {
         const user = res.find((a: any) => {
           return a.email === this.loginForm.value.email && a.password === this.loginForm.value.password
         });
+        if (user) {
+          this.commonService.saveLoggedInUser(user);
+        }
         if (user.userType == 1) {
           console.log('zee', user);
 

@@ -6,7 +6,7 @@ import { apiConst } from 'apiconstants';
   providedIn: 'root'
 })
 export class CommonService {
-
+  loggedInUser = {}
   constructor(private http: HttpClient) {
 
   }
@@ -19,5 +19,11 @@ export class CommonService {
   getUserType() {
 
     return this.http.get(apiConst.userType)
+  }
+  saveLoggedInUser(userInfo) {
+    this.loggedInUser = userInfo
+  }
+  getLoggedInUser() {
+    return this.loggedInUser;
   }
 }

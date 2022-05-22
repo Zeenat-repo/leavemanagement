@@ -68,15 +68,15 @@ export class StaffManagementComponent implements OnInit {
       filter: "agNumberColumnFilter",
 
     },
-    {
-      headerName: 'Edit',
-      width: 100,
-      cellRenderer: 'buttonRenderer',
-      cellRendererParams: {
-        onClick: this.onEditButtonClick.bind(this),
-        label: 'Edit'
-      },
-    },
+    // {
+    //   headerName: 'Edit',
+    //   width: 100,
+    //   cellRenderer: 'buttonRenderer',
+    //   cellRendererParams: {
+    //     onClick: this.onEditButtonClick.bind(this),
+    //     label: 'Edit'
+    //   },
+    // },
     {
       headerName: 'View',
       cellRenderer: 'buttonRenderer',
