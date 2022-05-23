@@ -1,28 +1,28 @@
 <mat-toolbar>
     Leave Management Dashboard
 </mat-toolbar>
-
+ss:{{selectedTab}}
 <mat-sidenav-container>
     <mat-sidenav mode="side" opened>
         <button mat-button class="menu-button" (click)="goToPage('dashboard')">
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
         </button>
-        <button mat-button class="menu-button" (click)="goToPage('staffManagement')">
+        <button mat-button class="menu-button" (click)="goToPage('leave-management')">
             <mat-icon>info</mat-icon>
-            <span>Staf Management</span>
+            <span>Leave Management</span>
         </button>
     </mat-sidenav>
     <mat-sidenav-content *ngIf="selectedTab == 'dashboard'">
         <div class="content mat-elevation-z4">
-            dashboard555
-            <router-outlet></router-outlet>
+
+            <app-staff-dashboard></app-staff-dashboard>
         </div>
     </mat-sidenav-content>
-    <mat-sidenav-content *ngIf="selectedTab == 'staff-management'">
+    <mat-sidenav-content *ngIf="selectedTab == 'leave-management'">
         <div class="content mat-elevation-z4">
-            Stafff
 
+            <app-leave-management></app-leave-management>
 
         </div>
     </mat-sidenav-content>

@@ -1,12 +1,12 @@
 import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
-
 @Component({
-  selector: 'app-sidebar-menu',
-  templateUrl: './sidebar-menu.component.html',
-  styleUrls: ['./sidebar-menu.component.scss']
+  selector: 'app-hod',
+  templateUrl: './hod.component.html',
+  styleUrls: ['./hod.component.scss']
 })
-export class SidebarMenuComponent implements OnInit {
+export class HodComponent implements OnInit {
+
   selectedTab: any = 'dashboard';
 
   constructor(private cdref: ChangeDetectorRef) { }

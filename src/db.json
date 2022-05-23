@@ -1,0 +1,197 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "status": "1"
+    },
+    {
+      "id": 2,
+      "name": "Sales",
+      "status": "1"
+    }
+  ],
+  "userType": [
+    {
+      "id": 1,
+      "name": "HOD",
+      "status": "1"
+    },
+    {
+      "id": 2,
+      "name": "Staff",
+      "status": "1"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "firstName": "zeenat1",
+      "lastName": "pervin",
+      "email": "zee@gmail.com",
+      "mobile": "7654321234"
+    },
+    {
+      "id": 3,
+      "firstName": "mohiddssdf",
+      "lastName": "asdfsdf",
+      "email": "sdfs@gmail.com",
+      "mobile": "89898989898"
+    }
+  ],
+  "signUpUsers": [
+    {
+      "fullName": "Zeenat Siddique",
+      "userName": "zeenat.siddique",
+      "email": "zeenat@gmail.com",
+      "mobile": "8765456789",
+      "department": "Computer",
+      "password": "123456",
+      "id": 1,
+      "userType": 2
+    },
+    {
+      "fullName": "Sofia Siddique",
+      "userName": "sofia.siddique",
+      "email": "sofia@gmail.com",
+      "mobile": "8769543234",
+      "department": "Language",
+      "password": "789012",
+      "id": 2,
+      "userType": 2
+    },
+    {
+      "fullName": "asdfgh",
+      "userName": "aswqer",
+      "email": "zaq@gmail.com",
+      "mobile": "9876543234",
+      "department": "civil",
+      "password": "098765",
+      "id": 3,
+      "userType": 2
+    },
+    {
+      "fullName": "Angular",
+      "userName": "Angular.Developer",
+      "email": "angular@gmail.com",
+      "mobile": "4534567897",
+      "department": "HOD",
+      "password": "234567",
+      "id": 4,
+      "userType": 1
+    },
+    {
+      "fullName": "asdfqwertgyhuj",
+      "userName": "asdef.sderf",
+      "email": "zen@gmail.com",
+      "mobile": "1234567897",
+      "department": "Electrical",
+      "password": "123456789",
+      "id": 5,
+      "userType": 2
+    },
+    {
+      "fullName": "Mohideen",
+      "userName": "sjmohideen",
+      "email": "sjmohideen@gmail.com",
+      "mobile": "9986948282",
+      "department": "1",
+      "userType": "2",
+      "password": "123456",
+      "id": 6
+    },
+    {
+      "fullName": "hod",
+      "userName": "hod",
+      "email": "hod@gmail.com",
+      "mobile": "1234567891",
+      "department": "1",
+      "userType": "1",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "fullName": "stafff",
+      "userName": "staff",
+      "email": "staff@gmail.com",
+      "mobile": "0123456789",
+      "department": "1",
+      "userType": "2",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "fullName": "stafff",
+      "userName": "staff",
+      "email": "ms@gmail.com",
+      "mobile": "0123456789",
+      "department": "1",
+      "userType": "2",
+      "password": "123456",
+      "id": 9
+    },
+    {
+      "fullName": "stafff",
+      "userName": "staff",
+      "email": "rifa@gmail.com",
+      "mobile": "0123456789",
+      "department": "1",
+      "userType": "2",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "fullName": "stafff",
+      "userName": "staff",
+      "email": "irfan@gmail.com",
+      "mobile": "0123456789",
+      "department": "1",
+      "userType": "2",
+      "password": "123456",
+      "id": 11
+    },
+    {
+      "fullName": "nisha",
+      "userName": "nisha",
+      "email": "nisha@gmail.com",
+      "mobile": "1234567890",
+      "department": "1",
+      "userType": "1",
+      "password": "123456",
+      "id": 12
+    }
+  ],
+  "leaveStatus": [
+    {
+      "id": 1,
+      "status": "Pending"
+    },
+    {
+      "id": 2,
+      "status": "Approved"
+    },
+    {
+      "id": 3,
+      "status": "Rejected"
+    }
+  ],
+  "appliedLeave": [
+    {
+      "id": 1,
+      "startDate": "05-10-2022",
+      "endDate": "05-15-2022",
+      "userId": "1",
+      "status": "2"
+    },
+    {
+      "id": 2,
+      "startDate": "05-10-2022",
+      "endDate": "05-15-2022",
+      "userId": "1",
+      "status": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode2"
+  }
+}

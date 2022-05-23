@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+
+        <div class="col">
+            <mat-card class="dasboard-card">
+                <mat-card-title>Applied</mat-card-title>
+                <mat-card-content>
+                    <p class="center">
+                        {{data.leaveCount}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col">
+            <mat-card class="dasboard-card">
+                <mat-card-title>Approved</mat-card-title>
+                <mat-card-content>
+                    <p class="center">
+                        {{data.approvedCount}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <div class="col">
+            <mat-card class="dasboard-card">
+                <mat-card-title>Rejected</mat-card-title>
+                <mat-card-content>
+                    <p class="center">
+                        {{data.rejectedCount}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+        <div class="col">
+            <mat-card class="dasboard-card">
+                <mat-card-title>Pending</mat-card-title>
+                <mat-card-content>
+                    <p class="center">
+                        {{data.pendingCount}}
+                    </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+
+    </div>
+
+</div>

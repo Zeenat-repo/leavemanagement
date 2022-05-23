@@ -1,92 +1,102 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="text-center">
-                    <h1>Sign Up</h1>
-                    <h6>Register Yourself!!</h6>
-                </div>
-                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
-                  <div class="mb-3">
-                    <input type="file" (change)="onFileSelected($event)">
-                  </div>
-                 
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">FullName</label>
-                        <input
-                        placeholder="Enter FullName"
-                         type="text" 
-                         autocomplete="off"
-                         formControlName="fullName"
-                        class="form-control"
-                         id="exampleInputPassword1">
-                     <span class="text-danger" *ngIf="signupForm.controls['fullName'].dirty && signupForm.hasError('required','fullName')">FullName is required</span>
-                      </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign Up</h1>
+          <h6>Register Yourself!!</h6>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <input type="file" (change)="onFileSelected($event)">
+          </div>
 
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">UserName</label>
-                        <input type="text"
-                        placeholder="Enter Username"
-                        autocomplete="off"
-                        formControlName="userName"
-                         class="form-control" id="exampleInputPassword1">
-                         <span class="text-danger" *ngIf="signupForm.controls['userName'].dirty && signupForm.hasError('required','userName')">UserName is required</span>
-                      </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">FullName</label>
+            <input placeholder="Enter FullName" type="text" autocomplete="off" formControlName="fullName"
+              class="form-control" id="exampleInputPassword1">
+            <span class="text-danger"
+              *ngIf="signupForm.controls['fullName'].dirty && signupForm.hasError('required','fullName')">FullName is
+              required</span>
+          </div>
 
-                    <div class="mb-3">
-                      <label for="exampleInputEmail1" class="form-label">Email address</label>
-                      <input type="email" 
-                      placeholder="Enter email"
-                      autocomplete="off"
-                      formControlName="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
-                      <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">Email is required</span>
-                    </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">UserName</label>
+            <input type="text" placeholder="Enter Username" autocomplete="off" formControlName="userName"
+              class="form-control" id="exampleInputPassword1">
+            <span class="text-danger"
+              *ngIf="signupForm.controls['userName'].dirty && signupForm.hasError('required','userName')">UserName is
+              required</span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" placeholder="Enter email" autocomplete="off" formControlName="email"
+              class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+            <span class="text-danger"
+              *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">Email is
+              required</span>
+          </div>
 
 
-                    <div class="mb-3">
-                      <label for="exampleInputPassword1" class="form-label">Contact No </label>
-                      <input type="text" 
-                      placeholder="Enter 10 digit mobile no"
-                      autocomplete="off" formControlName="mobile" class="form-control" id="exampleInputPassword1">
-                      <span class="text-danger" *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">Contact No is required</span>
-                      
-                    </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contact No </label>
+            <input type="text" placeholder="Enter 10 digit mobile no" autocomplete="off" formControlName="mobile"
+              class="form-control" id="exampleInputPassword1">
+            <span class="text-danger"
+              *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">Contact No is
+              required</span>
 
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label" >Department</label>
-                        <select  formControlName="department" class="form-control ">
-                          <option value="" ></option>
-                          <option value="Hod">HOD</option>
-                          <option value="Me">Diploma in Mechanical Engineering</option>
-                          <option value="Electrical">Diploma in Electrical Engineering</option>
-                          <option value="Eee">Diploma in Electrical and Electronics Engineering</option>
-                          <option value="Cse">Diploma in Computer Science Engineering</option>
-                          <option value="Ece">Diploma in Electronics and Communication Engineering.</option>
-                      </select>
-                        <!-- <input type="text" 
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Department</label>
+            <select formControlName="department" class="form-control ">
+              <option value="">--Select--</option>
+              <option *ngFor="let dept of departmentList" value="{{dept.id}}">{{dept.name}}</option>
+
+            </select>
+            <!-- <input type="text" 
                         placeholder="Select from dropdown"
                         autocomplete="off" formControlName="department" class="form-control" id="exampleInputPassword1"> -->
-                        <span class="text-danger" *ngIf="signupForm.controls['department'].dirty && signupForm.hasError('required','department')">Department  is required</span>
-                      </div>
+            <span class="text-danger"
+              *ngIf="signupForm.controls['department'].dirty && signupForm.hasError('required','department')">Department
+              is required</span>
+          </div>
+
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">User Type</label>
+            <select formControlName="userType" class=" form-control ">
+              <option value="">--Select--</option>
+              <option *ngFor=" let userType of userTypeList" value="{{userType.id}}">{{userType.name}}</option>
+
+            </select>
+            <!-- <input type="text" 
+                        placeholder="Select from dropdown"
+                        autocomplete="off" formControlName="department" class="form-control" id="exampleInputPassword1"> -->
+            <span class="text-danger"
+              *ngIf="signupForm.controls['department'].dirty && signupForm.hasError('required','department')">Department
+              is required</span>
+          </div>
 
 
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password"  
-                        placeholder="Enter password"
-                        autocomplete="off"
-                        formControlName="password" class="form-control" id="exampleInputPassword1">
-                        <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">Password is required</span>
-                      </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" placeholder="Enter password" autocomplete="off" formControlName="password"
+              class="form-control" id="exampleInputPassword1">
+            <span class="text-danger"
+              *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">Password is
+              required</span>
+          </div>
 
 
-                    <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">SignUp</button>
-                  </form>
-                  <a style="color: white; margin-top: 10px;" routerLink="/login">Already registered?Click for login!!</a>
-            </div>
-  
-        </div>
+          <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary">SignUp</button>
+        </form>
+        <a style="color: white; margin-top: 10px;" routerLink="/login">Already registered?Click for login!!</a>
+      </div>
+
     </div>
-  
   </div>
+
+</div>

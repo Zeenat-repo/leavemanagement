@@ -8,21 +8,20 @@
             <mat-icon>dashboard</mat-icon>
             <span>Dashboard</span>
         </button>
-        <button mat-button class="menu-button" (click)="goToPage('staffManagement')">
+        <button mat-button class="menu-button" (click)="goToPage('staff-management')">
             <mat-icon>info</mat-icon>
-            <span>Staf Management</span>
+            <span>StaffManagement</span>
         </button>
     </mat-sidenav>
     <mat-sidenav-content *ngIf="selectedTab == 'dashboard'">
         <div class="content mat-elevation-z4">
-            dashboard555
-            <router-outlet></router-outlet>
+            <app-dashboard></app-dashboard>
         </div>
     </mat-sidenav-content>
     <mat-sidenav-content *ngIf="selectedTab == 'staff-management'">
         <div class="content mat-elevation-z4">
-            Stafff
 
+            <app-staff-management></app-staff-management>
 
         </div>
     </mat-sidenav-content>
